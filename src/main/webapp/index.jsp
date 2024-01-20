@@ -4,17 +4,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home Page</title>
+<title>Coder bloging</title>
+<link href="CSS/mystyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<p>
-		Coder Blogger is a comprehensive platform that combines the power of coding and blogging. 
-		The user-friendly front end provides seamless registration and login processes, allowing users to create, share, 
-		and interact with blogs. The backend ensures secure user data storage, and the top-notch feed page encourages users to upscale, downscale, comment, and share posts. 
-		The profile page is customizable with personal details, social media links, and a record of previous posts. The Contact Us and About Us pages offer direct communication channels and essential information.
-		Coder Blogger stands as an inviting platform for coding enthusiasts ,students and bloggers to share, and explore diverse content over the platform.
-		<b>Cultivating Code Tales: Coder Blogger - Where the Coding Journey Becomes the Narrative.</b>
-	</p><br><br>
+	<header>
+		<div class="logo">
+			<img alt="coder" src="img/coder_blogger.png" id="logo">
+		</div>
+		<ul class="nav">
+			<li><a href="/index.jsp">Home</a></li>
+			<li><a href="/index.jsp">Profile</a></li>
+			<li><a href="/index.jsp">Feed</a></li>
+			<li><a href="/index.jsp">about us</a></li>
+			<li><a href="/index.jsp">contact us</a></li>
+		</ul>
+	</header>
 	<a href="/CoderLogin.jsp">Login</a><br>
 	<a href="/CoderRegister.jsp">Register</a><br>
 </body>
