@@ -22,5 +22,6 @@
 	</header>
 	<a href="CoderLogin.jsp">Login</a><br>
 	<a href="CoderRegister.jsp">Register</a><br>
+	<a href="Profile.jsp">profile</a>
 </body>
 </html>
