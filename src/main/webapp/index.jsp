@@ -16,7 +16,7 @@
 			<li><a href="/index.jsp">Home</a></li>
 			<li><a href="/index.jsp">Profile</a></li>
 			<li><a href="/index.jsp">Feed</a></li>
-			<li><a href="/index.jsp">about us</a></li>
+			<li><a href="/index.jsp">about developer</a></li>
 			<li><a href="/index.jsp">contact us</a></li>
 		</ul>
 	</header>
