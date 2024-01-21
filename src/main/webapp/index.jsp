@@ -20,7 +20,7 @@
 			<li><a href="/index.jsp">contact us</a></li>
 		</ul>
 	</header>
-	<a href="/CoderLogin.jsp">Login</a><br>
-	<a href="/CoderRegister.jsp">Register</a><br>
+	<a href="CoderLogin.jsp">Login</a><br>
+	<a href="CoderRegister.jsp">Register</a><br>
 </body>
 </html>
