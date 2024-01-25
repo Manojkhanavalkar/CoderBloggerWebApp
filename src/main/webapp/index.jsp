@@ -3,25 +3,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Coder bloging</title>
-<link href="CSS/mystyle.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-	<header>
-		<div class="logo">
-			<img alt="coder" src="img/coder_blogger.png" id="logo">
-		</div>
-		<ul class="nav">
-			<li><a href="/index.jsp">Home</a></li>
-			<li><a href="/index.jsp">Profile</a></li>
-			<li><a href="/index.jsp">Feed</a></li>
-			<li><a href="/index.jsp">about developer</a></li>
-			<li><a href="/index.jsp">contact us</a></li>
-		</ul>
-	</header>
-	<a href="CoderLogin.jsp">Login</a><br>
-	<a href="CoderRegister.jsp">Register</a><br>
-	<a href="Profile.jsp">profile</a>
-</body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coder blogger</title>
+<link rel="stylesheet" href="CSS/homestyle.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Coder Blogger</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+        </label>
+        <ul class="links">
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="#">About Developers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="CoderLogin.jsp" class="signin">Log In</a>
+          <a href="CoderRegister.jsp" class="signup">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Coder Blogger</h2>
+        <p>
+          Coder Blogger is a comprehensive platform that combines the power of coding
+          and blogging. It is allowing users to create, share, and interact with 
+          Coding related blogs.  The user-friendly front-end provides seamless 
+          registration and login processes, The back-end ensures secure user data storage.
+          
+        </p>
+        <div class="buttons">
+          <a href="CoderLogin.jsp" class="join">Join Now</a>
+          <a href="#" class="learn">Learn More</a>
+        </div>
+      </div>
+      <div class="img">
+        <img src="img/coder_blogger.png" alt="hero image">
+      </div>
+    </section>
+  </body>
 </html>
