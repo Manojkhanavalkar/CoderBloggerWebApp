@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1> FEED Page</h1>
+<h2>welcome:${coder_name}</h2>
 </body>
 </html>
