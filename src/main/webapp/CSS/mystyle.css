@@ -26,14 +26,15 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 29vw;
+  transform: translate( -50%, -50%);
+  width: 24vw;
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .center h1{
   text-align: center;
+  color:cornflowerblue;
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
 }
@@ -45,13 +46,13 @@ body{
 
 form .txt_field{
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid #f5f5f5;
   margin: 30px 0;
 }
 
 .txt_field input{
   width: 100%;
-  padding: 0 5px;+
+  padding: 0 5px;
   height: 40px;
   font-size: 16px;
   border: none;
@@ -63,7 +64,7 @@ form .txt_field{
   position: absolute;
   top: 50%;
   left: 5px;
-  color: #adadad;
+  color: #000000;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
@@ -83,7 +84,7 @@ form .txt_field{
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
   top: -5px;
-  color: #2691d9;
+  color: #ffffff;
 }
 
 .txt_field input:focus ~ span::before,

@@ -15,6 +15,11 @@
               <div class="txt_field">
                   <input type="text" name="name" required>
                   <span></span>
+                  <label>Full Name</label>
+              </div>
+              <div class="txt_field">
+                  <input type="text" name="name" required>
+                  <span></span>
                   <label>Coder Name</label>
               </div>
               <div class="txt_field">
@@ -22,6 +27,14 @@
                   <span></span>
                   <label>Email</label>
               </div>
+              <div class="gender">
+              	   <input type="radio" name="gender" value="male" style="color:Tomato;"> Male
+                   <input type="radio" name="gender" value="female"> Female
+                   <input type="radio" name="gender" value="other"> Other
+                    <span></span>
+                 
+               </div>  
+              
               <div class="txt_field">
                   <input type="password" name="password" required>
                   <span></span>
