@@ -37,17 +37,18 @@ body {
 }
 
 .navbar .links {
+ 
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 35px;
+  gap: 60px;
 }
 
 .navbar .links a {
   font-weight: 500;
   text-decoration: none;
   color: #fff;
-  padding: 10px 0;
+  padding: 20px 0;
   transition: 0.2s ease;
 }
 

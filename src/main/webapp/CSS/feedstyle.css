@@ -1,0 +1,106 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+	height: 100vh;
+    overflow: hidden;
+	font-family: 'song myung' , serif;
+}
+
+header {
+	background: transparent;
+	height: 66px;
+}
+
+header * {
+	color: white;
+}
+
+header .title {
+	float: left;
+	height: inherit;
+	margin-left: 2em;
+}
+
+header .title-text {
+	margin: 11px;
+	font-family: 'song myung', serif;
+}
+
+header .title-text span {
+	color: #9fe7fb;
+}
+
+header .nav {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+header .nav li {
+	float: left;
+	position: relative;
+}
+
+header .nav li ul {
+	position: absolute;
+	top: 44px;
+	right: 0px;
+	width: 135px;
+	display: none;
+	list-style: none;
+}
+
+header .nav li:hover ul {
+	display: block;
+}
+
+header .nav li ul li {
+	width: 100%;
+}
+
+header .nav li ul li a {
+	padding: 5px;
+	background: white;
+	color: #444;
+	margin: 1px;
+	text-indent: 5px;
+}
+
+header .nav li ul li a.logout {
+	color: red;
+	font-size: 1em;
+}
+
+header .nav li ul li a.myblog {
+	color: black;
+	font-size: 1em;
+}
+
+header .nav li ul li a:hover {
+	background: #d5d6d6;
+}
+
+header .nav li a {
+	display: block;
+	padding: 21px;
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+header .nav li a:hover {
+	color: #6dd9f8;
+	transition: 0.5s;
+	
+}
+header .menu-toggle {
+	display: none;	
+} 
