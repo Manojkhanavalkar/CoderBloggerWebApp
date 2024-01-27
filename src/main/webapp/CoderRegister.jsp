@@ -28,8 +28,7 @@
                   <label>Email</label>
               </div>
               <div class="gender">
-                  
-              	   <input type="radio" name="gender" value="male"> Male
+              	   <input type="radio" name="gender" value="male" style="color:Tomato;"> Male
                    <input type="radio" name="gender" value="female"> Female
                    <input type="radio" name="gender" value="other"> Other
                     <span></span>

@@ -17,7 +17,6 @@
         </label>
         <ul class="links">
           <li><a href="index.jsp">Home</a></li>
-          <li><a href="Feed.jsp">Feed</a></li>
           <li><a href="#">About Developers</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
