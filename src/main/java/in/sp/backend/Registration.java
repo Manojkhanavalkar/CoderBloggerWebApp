@@ -22,7 +22,7 @@ public class Registration extends HttpServlet{
 		String gender=req.getParameter("gender1");
 		String email=req.getParameter("email");
 		String password=com.logicAlgo.PasswordHashing.doHashing(req.getParameter("password"));
-		String codedPass=com.logicAlgo.PasswordHashing.doHashing(req.getParameter("password"));
+		String codedPass=com.logicAlgo.PasswordHashing.doHashing(req.getParameter("cpassword"));
 		resp.setContentType("text/html");
 		try {
 			if(!codedPass.equals(password)) {
