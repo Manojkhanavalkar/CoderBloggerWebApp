@@ -26,7 +26,10 @@ public class Registration extends HttpServlet{
 		resp.setContentType("text/html");
 		try {
 			if(!codedPass.equals(password)) {
-				out.print("<h3 style='color:red'>confirm password and password did not match</h3>");
+				out.println("<script type=\"text/javascript\">");
+				   out.println("alert('Confirm password and password did not match!');");//adding message
+				   out.println("location='CoderRegister.jsp';");
+				   out.println("</script>");
 				RequestDispatcher rd=req.getRequestDispatcher("/CoderRegister.jsp");
 				rd.include(req, resp);
 			}
@@ -43,19 +46,27 @@ public class Registration extends HttpServlet{
 				
 				int count=ps.executeUpdate();
 				if(count>0) {
-					out.print("<h3 style='color:green'>User registration successful</h3>");
+					out.println("<script type=\"text/javascript\">");
+					   out.println("alert('REGISTRATION SUCESSFULL!!Please Login');");//adding message
+					   out.println("location='CoderLogin.jsp';");
+					   out.println("</script>");
 					RequestDispatcher rd=req.getRequestDispatcher("/CoderLogin.jsp");
 					rd.include(req, resp);
 				}
 				else {
-					out.print("<h3 style='color:red'>User registration unsuccessful some error occured!</h3>");
+					out.println("<script type=\"text/javascript\">");
+					   out.println("alert('User registration unsuccessful some error occured');");//adding message
+					   out.println("location='CoderRegister.jsp';");
+					   out.println("</script>");
 					RequestDispatcher rd=req.getRequestDispatcher("/CoderRegister.jsp");
 					rd.include(req, resp);
 				}
 			}
 		} catch (Exception e) {
-			out.print("<h3 style='color:red'>User registration unsuccessful some error occured!</h3>");
-			out.print("<h3 style='color:red'>Error:</h3>"+"<h3>"+e.getMessage()+"</h3>");
+			out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Some error occured!!');");//adding message
+			   out.println("location='CoderRegister.jsp';");
+			   out.println("</script>");
 			RequestDispatcher rd=req.getRequestDispatcher("/CoderRegister.jsp");
 			rd.include(req, resp);
 		}
