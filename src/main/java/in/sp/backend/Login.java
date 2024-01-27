@@ -39,7 +39,7 @@ public class Login extends HttpServlet{
 			}
 			else {
 				 out.println("<script type=\"text/javascript\">");
-				   out.println("alert('User or password incorrect');");
+				   out.println("alert('User or password incorrect');");//adding message
 				   out.println("location='index.jsp';");
 				   out.println("</script>");
 			}
