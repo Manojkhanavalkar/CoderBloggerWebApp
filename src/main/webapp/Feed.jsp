@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="CSS/feedstyle.css" />
+<link rel="stylesheet" href="CSS/feedpage.css" />
   </head>
   <body>
     <header class="header">
