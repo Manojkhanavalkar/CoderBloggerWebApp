@@ -8,9 +8,9 @@
 </head>
 <body>
 	<form action="updateProfile" method="post" enctype="multipart/form-data">
-		Upload Profile photo:<input type="file" class="ProfileImage"> <br>
-		<input type="text" placeholder="about me !! write about yourself" class="about_me"> <br>
-		<input type="submit">
+		Upload Profile photo:<input type="file" name="ProfileImage" value=""> <br>
+		<input type="text" placeholder="about me !! write about yourself" name="about_me"> <br>
+		<input type="submit" value="submit">
 	</form>
 </body>
 </html>
