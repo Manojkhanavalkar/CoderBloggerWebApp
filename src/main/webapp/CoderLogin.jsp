@@ -18,7 +18,7 @@
       </div>
       <div class="login-content">
         <form action="LoginForm" method="post">
-          <img src="img/avatar.svg">
+          <img src="img/avatar.svg"> 
           <h2 class="title">Welcome</h2>
           <div class="input-div one">
             <div class="i">

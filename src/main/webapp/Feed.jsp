@@ -18,7 +18,7 @@
   <body>
     <header class="header">
        
-       <div class="title">
+       <div class="title"> 
        <h1 class="title-text"><span>Feed... </span></h1>
        </div>
         <i class= "fa fa bars menu-toggle"></i>

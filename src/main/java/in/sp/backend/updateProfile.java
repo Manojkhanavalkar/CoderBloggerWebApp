@@ -22,7 +22,7 @@ import java.sql.PreparedStatement;
  * Servlet implementation class updateProfile
  */
 //@MultipartConfig
-@WebServlet("/updateProfile")
+@WebServlet("/updateProfile") 
 @MultipartConfig
 public class updateProfile extends HttpServlet {
 	

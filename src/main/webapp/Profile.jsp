@@ -13,7 +13,7 @@
 	<img alt="profile_image" src="./img/profile/${Profile_info.image}" height="200px" width="200px"> <br>
 	ABOUT ME:${Profile_info.about_me}
 	</div>
-	<a href="updateProfile.jsp">UPDATE profile</a> 
+	<a href="updateProfile.jsp">UPDATE profile</a>  
 	
 	
 </body>
