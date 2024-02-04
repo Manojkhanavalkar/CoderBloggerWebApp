@@ -34,7 +34,7 @@ public class updateProfile extends HttpServlet {
 		String imageFileName=file.getSubmittedFileName();  // get selected image file name
 		System.out.println("Selected Image File Name : "+imageFileName);
 		//creating path to upload the image
-	String uploadPath="D:/G-NEW_VOLUME/Coder Blogger website/CoderBlogger/ProfilePhotos/"+imageFileName;
+	String uploadPath="D:/G-NEW_VOLUME/Coder Blogger website/CoderBlogger/src/main/webapp/img/profile/"+imageFileName;
 		try
 		{
 		FileOutputStream fos=new FileOutputStream(uploadPath);
