@@ -31,9 +31,11 @@
           	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
           	</a>
           	<ul>
-          	<li><a href="#" class= "myblog">My Blog</a></li>
-          	<li><a href="index.jsp" class="logout">Logout</a></li>
+          	<li><a href="Profile.jsp" class= "myblog">${coder_name}</a></li>
+          	<li><a href="Logout" class="logout" >Logout</a></li>
           	</ul>
           	</li>
         </ul>
     </header>
+    </body>
+    </html>
