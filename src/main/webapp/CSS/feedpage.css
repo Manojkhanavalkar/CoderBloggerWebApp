@@ -1,7 +1,5 @@
 @charset "ISO-8859-1";
 
-@charset "ISO-8859-1";
-
 * {
 	box-sizing: border-box;
 }
@@ -106,3 +104,98 @@ header .nav li a:hover {
 header .menu-toggle {
 	display: none;	
 } 
+
+
+@media screen and (max-width: 768px) {
+	
+	header {
+		position: relative;
+	}
+	
+	header .nav {
+		width:100%;
+		background: #0E94A0;
+		max-width: 100%;
+		overflow: hidden;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		
+	}
+	
+	
+	
+	
+	header .nav li {
+		width: 100%;
+	}
+	
+	header .nav li ul {
+		position: static;
+		display: block;
+		width: 14%;
+	}
+	
+	
+	header .nav li ul li a {
+	padding: 1px;
+	background: none;
+	color: white;
+	padding-left: 50px;
+	text-indent: 5px;
+}
+
+	header .nav li ul li a.logout {
+		color: red;
+		background: white;
+		font-size: 1em;
+}
+
+	header .nav li ul li a.myblog {
+		color: white;
+		font-size: 1em;
+}
+
+	header .nav li ul li a:hover {
+		background: #d5d6d6;
+}
+
+	header .nav li a {
+		display: block;
+		padding: 5px;
+		font-size: 1.1em;
+		text-decoration: none;
+}
+
+	header .menu-toggle {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		font-size: 1.9em;
+}
+	
+	header .title {
+		margin-left: .8em;
+	}
+	
+}
+
+
+
+
+
+#menu-toggle {
+  display: none;
+}
+#menu {
+  background-color: #ffa500;
+  width: 780px;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+}
+#menu-toggle:checked + #menu {
+  max-height: 100px;
+}
