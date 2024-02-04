@@ -34,6 +34,7 @@ public class Login extends HttpServlet{
 			{
 				HttpSession session=req.getSession();
 				session.setAttribute("coder_name", rs.getString("coder_name"));
+				session.setAttribute("email_id", rs.getString("email_id"));
 				RequestDispatcher rd=req.getRequestDispatcher("/Feed.jsp");
 				rd.include(req, resp);
 			}

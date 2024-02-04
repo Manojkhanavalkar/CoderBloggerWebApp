@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Profile Page</title>
 </head>
 <body>
-	<h1>Profile page</h1>
+	<h1>Profile</h1>
+	
+	<a href="updateProfile.jsp">UPDATE profile</a>
+	
+	
 </body>
 </html>

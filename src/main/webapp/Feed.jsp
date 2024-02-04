@@ -27,7 +27,7 @@
           <li><a href="index.jsp">Home</a></li> 
           <li><a href="#">Contact Us</a></li>
            <li>
-          	<a href="#">Profile
+          	<a href="Profile.jsp">Profile
           	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
           	</a>
           	<ul>
