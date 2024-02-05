@@ -14,7 +14,7 @@
 	ABOUT ME:${Profile_info.about_me}
 	</div>
 	<a href="updateProfile.jsp">UPDATE profile</a>  
-	
+	<a href="myblogs.jsp"> <button>MY BLOGS</button> </a>
 	
 </body>
 </html>
