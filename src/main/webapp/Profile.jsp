@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -40,3 +41,19 @@
     </header>
     </body>
     </html>
+=======
+<title>${coder_name}</title><!-- this is the profile name fetched from back end -->
+</head>
+<body>
+	 <h1>Profile</h1>
+	<div>
+	NAME: ${Profile_info.name} <br>
+	<img alt="profile_image" src="./img/profile/${Profile_info.image}" height="200px" width="200px"> <br>
+	ABOUT ME:${Profile_info.about_me}
+	</div>
+	<a href="updateProfile.jsp">UPDATE profile</a>  
+	<a href="myblogs.jsp"> <button>MY BLOGS</button> </a>
+	
+</body>
+</html>
+>>>>>>> branch 'master' of https://github.com/Manojkhanavalkar/CoderBloggerWebApp
