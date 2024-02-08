@@ -37,7 +37,7 @@
           	<li><a href="updateProfile.jsp" class= "edit profile">Edit Profile</a></li>
           	<li><a href="#" class="change password" >Change Password</a></li>
           	<li><a href="Logout" class="logout" >Logout</a></li>
-          	</ul>
+          	</ul> 
           	</li>
         </ul>
           <section class="hero-section">
