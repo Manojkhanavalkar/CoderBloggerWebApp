@@ -44,9 +44,11 @@
       <div class="hero">
 	NAME: ${Profile_info.name} <br>
 	<div class="img">
-        <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image"> <br>
+        <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image">
+         <br>
       </div>
 	ABOUT ME:${Profile_info.about_me}
+	<a href="createblog.jsp"> <button>create blog</button> </a>
 	</div>
 	<!-- <a href="myblogs.jsp"> <button>Create Blog</button> </a> -->
 	</section>
