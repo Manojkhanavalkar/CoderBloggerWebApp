@@ -1,4 +1,4 @@
-package com.blog.posts;
+package com.blog.entities;
 
 public class Blog {
 	String title;

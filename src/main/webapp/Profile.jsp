@@ -44,9 +44,16 @@
       <div class="hero">
 	NAME: ${Profile_info.name} <br>
 	<div class="img">
+<<<<<<< HEAD
         <!--  <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image"> <br> -->
       </div> -->
+=======
+        <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image">
+         <br>
+      </div>
+>>>>>>> branch 'master' of https://github.com/Manojkhanavalkar/CoderBloggerWebApp
 	ABOUT ME:${Profile_info.about_me}
+	<a href="createblog.jsp"> <button>create blog</button> </a>
 	</div>
 	<!-- <a href="myblogs.jsp"> <button>Create Blog</button> </a> -->
 	</section>

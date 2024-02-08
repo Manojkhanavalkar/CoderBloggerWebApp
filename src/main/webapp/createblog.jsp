@@ -10,6 +10,16 @@
 	<h2>Create a Blog Post</h2>
     
     <form action="submitpost" method="post">
+    <!-- creating a drop down list to select category-->
+    <select>
+    	<option selected disabled>---select category---</option>
+    	<option>cat1</option>
+    	<option>cat1</option>
+    	<option>cat1</option>
+    	<option>cat1</option>
+    	<option>cat1</option>
+    	<option>cat1</option><!-- i have given six options here those are like java,python,c/c++,frontend,backend,fullstack and showing here from backend -->
+    </select><br><br>
         <label for="postTitle">Title:</label>
         <input type="text" id="postTitle" name="postTitle" required><br>
 
