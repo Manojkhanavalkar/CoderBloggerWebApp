@@ -28,7 +28,7 @@
         <ul class="nav">
       
           <li><a href="index.jsp">Home</a></li> 
-          <li><a href="#">New Post</a></li>
+          <li><a href="createblog.jsp">New Blog</a></li>
            <li>
           	<a href="#">Account
           	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
@@ -48,7 +48,7 @@
       </div>
 	ABOUT ME:${Profile_info.about_me}
 	</div>
-	<a href="myblogs.jsp"> <button>MY BLOGS</button> </a>
+	<!-- <a href="myblogs.jsp"> <button>Create Blog</button> </a> -->
 	</section>
     </header>
     </body>
