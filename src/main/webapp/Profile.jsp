@@ -39,7 +39,7 @@
           	<li><a href="Logout" class="logout" >Logout</a></li>
           	</ul> 
           	</li>
-        </ul>
+        </ul> 
           <section class="hero-section">
       <div class="hero">
 	NAME: ${Profile_info.name} <br>
