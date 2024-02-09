@@ -1,5 +1,10 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.code.blog.dao.PostDao"%>
+<%@page import="com.blog.entities.Category"%>
+<%@page import="com.coderblogger.helper.ConnectionProvider"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +16,22 @@
     
     <form action="submitpost" method="post">
     <!-- creating a drop down list to select category-->
+    <%
+    	Connection con=ConnectionProvider.getConnection();
+    %>
+    <!-- <h1><%= con %></h1> -->
     <select>
     	<option selected disabled>---select category---</option>
-    	<option>cat1</option>
-    	<option>cat1</option>
-    	<option>cat1</option>
-    	<option>cat1</option>
-    	<option>cat1</option>
-    	<option>cat1</option><!-- i have given six options here those are like java,python,c/c++,frontend,backend,fullstack and showing here from backend -->
+    	<%
+    		PostDao postd=new PostDao(ConnectionProvider.getConnection());
+    		ArrayList<Category> list=postd.getAllCategories();
+    		for(Category c:list){	
+    	%>
+    	<option><%=c.getName() %></option><!-- Adding categories from backend -->
+    	<%
+    		}
+    	%>
+    	<!-- i have given six options here those are like java,python,c/c++,frontend,backend,fullstack and showing here from backend -->
     </select><br><br>
         <label for="postTitle">Title:</label>
         <input type="text" id="postTitle" name="postTitle" required><br>
