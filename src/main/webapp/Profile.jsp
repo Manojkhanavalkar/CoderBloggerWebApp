@@ -59,6 +59,7 @@
 	<!-- <a href="myblogs.jsp"> <button>Create Blog</button> </a> -->
 	</section>
     </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     </body>
     </html>
 <!--   branch 'master' of https://github.com/Manojkhanavalkar/CoderBloggerWebApp -->

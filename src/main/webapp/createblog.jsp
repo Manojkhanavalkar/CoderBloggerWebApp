@@ -14,13 +14,13 @@
 <body>
 	<h2>Create a Blog Post</h2>
     
-    <form action="submitpost" method="post">
+    <form action="submitpost" method="post" enctype="multipart/form-data">
     <!-- creating a drop down list to select category-->
     <%
     	Connection con=ConnectionProvider.getConnection();
     %>
     <!-- <h1><%= con %></h1> -->
-    <select>
+    <select name="category">
     	<option selected disabled>---select category---</option>
     	<%
     		PostDao postd=new PostDao(ConnectionProvider.getConnection());
@@ -39,9 +39,10 @@
         <label for="postContent">Content:</label><br>
         <textarea id="postContent" name="postContent" rows="6" cols="40" required></textarea><br>
         <label for="githubLink">GitHub Link:</label>
-        <input type="url" id="githubLink" name="githubLink" pattern="https:\/\/github\.com\/.+"> <br>
+        <input type="url" id="githubLink" name="githubLink" pattern="https:\/\/github\.com\/.+" required> <br>
         <small>Enter a valid GitHub link starting with "https://github.com/"</small><br><br>
-        <input type="submit" value="Submit Post">
+        Add photo:<input type="file" name="blogImage" value="" required><br><br>
+        <input type="submit" value="Post">
     </form>
 </body>
 </html>
