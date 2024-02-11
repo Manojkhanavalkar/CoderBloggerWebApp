@@ -46,7 +46,7 @@ body {
 .navbar .links a {
   font-weight: 500;
   text-decoration: none;
-  color: #fff;
+  color: white;
   padding: 10px 0;
   transition: 0.2s ease;
 }

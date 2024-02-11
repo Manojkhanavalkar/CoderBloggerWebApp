@@ -19,7 +19,7 @@
     <%
     	Connection con=ConnectionProvider.getConnection();
     %>
-    <!-- <h1><%= con %></h1> -->
+     <h1><%= con %></h1> 
     <select>
     	<option selected disabled>---select category---</option>
     	<%
