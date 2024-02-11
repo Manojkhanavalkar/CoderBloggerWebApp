@@ -33,7 +33,9 @@ public class Profile extends HttpServlet{
 			//now we need to check if there any of record present if yes then send that to profile.jsp else send message to add info by clicking the link update profile
 			if(rs.next()) {
 				in.sp.backend.User user=new User(rs.getString("name"), rs.getString("photo_path"), rs.getString("about_me"));//User(String name, String image,String about_me )
-				req.setAttribute("Profile_info", user);
+//				req.setAttribute("Profile_info", user);
+//				req.getServletContext().getRequestDispatcher("/Profile.jsp").forward(req, resp);/
+				session.setAttribute("Profile_info", user); 
 				req.getServletContext().getRequestDispatcher("/Profile.jsp").forward(req, resp);
 			}else {//alert to update profile
 				out.println("<script type=\"text/javascript\">");
