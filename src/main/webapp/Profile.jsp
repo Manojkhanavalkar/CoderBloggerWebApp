@@ -57,7 +57,15 @@
       %>
 	NAME: <%=usr.getName() %> <br>
 	<div class="img">
+<<<<<<< HEAD
         <img src="img/profile/<%=usr.getImage() %>" height="200px" width="200px" alt="hero image">
+=======
+
+          <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image"> <br>
+      
+
+        <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image">
+>>>>>>> branch 'master' of https://github.com/Manojkhanavalkar/CoderBloggerWebApp.git
          <br>
       </div>
 

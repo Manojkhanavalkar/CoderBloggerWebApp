@@ -19,8 +19,13 @@
     <%
     	Connection con=ConnectionProvider.getConnection();
     %>
-    <!-- <h1><%= con %></h1> -->
+<<<<<<< HEAD
+     <h1><%= con %></h1> 
+    <select>
+=======
+    <!-- <h1><%= con %></h1> --> 
     <select name="category">
+>>>>>>> branch 'master' of https://github.com/Manojkhanavalkar/CoderBloggerWebApp
     	<option selected disabled>---select category---</option>
     	<%
     		PostDao postd=new PostDao(ConnectionProvider.getConnection());

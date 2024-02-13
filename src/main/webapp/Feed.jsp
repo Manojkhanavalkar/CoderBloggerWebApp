@@ -17,10 +17,9 @@
   </head>
   <body>
     <header class="header">
-       
-       <div class="title"> 
-       <h1 class="title-text"><span>Feed... </span></h1>
-       </div>
+     <nav class="title">
+        <h1 class="title-text">Coder Blogger</h1>
+      </nav>
         <i class= "fa fa bars menu-toggle"></i>
         <ul class="nav">
       
