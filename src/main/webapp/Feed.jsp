@@ -31,7 +31,7 @@
           	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
           	</a>
           	<ul>
-          	<li><a href="/CoderBlogger/Profile" class= "myblog" >${coder_name}</a></li>
+          	<li><a href="/CoderBlogger/Profile.jsp" class= "myblog" >${coder_name}</a></li>
           	<li><a href="Logout" class="logout" >Logout</a></li>
           	</ul>
           	</li>

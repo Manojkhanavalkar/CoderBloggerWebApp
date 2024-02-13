@@ -31,7 +31,7 @@
     	<%
     		}
     	%>
-    	<!-- i have given six options here those are like java,python,c/c++,frontend,backend,fullstack and showing here from backend -->
+    	<!-- i have given six options here those are like java,Python,c/c++,frontend,backend,fullstack and showing here from backend -->
     </select><br><br>
         <label for="postTitle">Title:</label>
         <input type="text" id="postTitle" name="postTitle" required><br>

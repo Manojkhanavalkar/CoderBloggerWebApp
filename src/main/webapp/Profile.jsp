@@ -1,6 +1,10 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="java.sql.*"%>
+    <%@page import="com.coderblogger.helper.ConnectionProvider"%>
+    <%@page import="in.sp.backend.Profile" %>
+    <%@page import="in.sp.backend.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,18 +47,23 @@
         </ul> 
           <section class="hero-section">
       <div class="hero">
-	NAME: ${Profile_info.name} <br>
+      <!-- Java code to show the profile details -->
+      <% 
+      	Connection con=ConnectionProvider.getConnection();
+      	String email=(String) session.getAttribute("email_id");
+      	Profile profile=new Profile(con,email);
+      	ArrayList<User> list=profile.getUser();
+      	for(User usr:list){
+      %>
+	NAME: <%=usr.getName() %> <br>
 	<div class="img">
-
-        <!--  <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image"> <br> -->
-      
-
-        <img src="img/profile/${Profile_info.image}" height="200px" width="200px" alt="hero image">
+        <img src="img/profile/<%=usr.getImage() %>" height="200px" width="200px" alt="hero image">
          <br>
       </div>
 
-	ABOUT ME:${Profile_info.about_me}
+	ABOUT ME:<%=usr.getAbout_me() %>
 	<a href="createblog.jsp"> <button>create blog</button> </a>
+	<%} %>
 	</div>
 	<!-- <a href="myblogs.jsp"> <button>Create Blog</button> </a> -->
 	</section>
