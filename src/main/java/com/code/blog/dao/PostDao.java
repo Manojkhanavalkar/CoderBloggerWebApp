@@ -1,6 +1,8 @@
 package com.code.blog.dao;
 import java.sql.*;
+import com.blog.entities.*;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.blog.entities.Category;
 public class PostDao {
@@ -28,6 +30,17 @@ public class PostDao {
 			e.printStackTrace();
 		}
 		
+		return list;
+	}
+	//get all the posts
+	public List<Blog>getAllPosts(){
+		List<Blog>list=new ArrayList<Blog>();
+		//fetch all the post will code tomorrow
+		return list;
+	}
+	public List<Blog> getPostByCatId(int catId){
+		List<Blog>list=new ArrayList<Blog>();
+		//fetch post by id
 		return list;
 	}
 }

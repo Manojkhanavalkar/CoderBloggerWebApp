@@ -1,3 +1,7 @@
+<%@page import="com.blog.entities.Category"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.coderblogger.helper.ConnectionProvider"%>
+<%@page import="com.code.blog.dao.PostDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -36,5 +40,35 @@
           	</li>
         </ul>
     </header>
+    <!-- Main body of the page -->
+    	<main>
+    		<div class="container">
+    			<div class="catagory-table">
+    				<table>
+    				<tr>
+    					<th><a href="#">All post</a></th>
+    					</tr>
+    					<%
+    						PostDao p=new PostDao(ConnectionProvider.getConnection());
+    						ArrayList<Category> list1=p.getAllCategories();
+    						for(Category c:list1){
+    							
+    						
+    					%>
+    					<tr>
+    					<th><a href="#"><%=c.getName() %></a><br></th>
+    					</tr>
+    					<%} %>
+    				
+    				</table>
+    			</div>
+    			<div class="post-display">
+    				<!-- all posts -->
+    				
+    			</div>
+    		</div>
+    	</main>
+    
+    <!-- End of main body -->
     </body>
     </html>
