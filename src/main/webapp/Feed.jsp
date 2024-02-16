@@ -11,12 +11,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <title>Feed Page</title>
 <!-- Google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="CSS/feedpage.css" />
   </head>
   <body>
@@ -43,32 +56,55 @@
     <!-- Main body of the page -->
     	<main>
     		<div class="container">
-    			<div class="catagory-table">
+    			<div class="row">
+    				<div class="col-md-4">
+    				<div class="catagory-table">
     				<table>
     				<tr>
-    					<th><a href="#">All post</a></th>
+    					<th><a href="#" class="list-group-item list-group-item-action">All post</a></th>
     					</tr>
     					<%
     						PostDao p=new PostDao(ConnectionProvider.getConnection());
     						ArrayList<Category> list1=p.getAllCategories();
     						for(Category c:list1){
-    							
-    						
     					%>
     					<tr>
-    					<th><a href="#"><%=c.getName() %></a><br></th>
+    					<th><a href="#" class="list-group-item list-group-item-action"><%=c.getName() %></a><br></th>
     					</tr>
     					<%} %>
     				
     				</table>
     			</div>
-    			<div class="post-display">
+    				</div>
+    				<div class="col-md-8" align="center" id="post-container">
     				<!-- all posts -->
+    				<div class="container" id="loader">
+    					<i class="fa fa-refresh fa-spin fa-5x" ></i>
+    					<h3>Loading...</h3>
+    				</div>
     				
     			</div>
+    			</div>
+    			
     		</div>
     	</main>
     
     <!-- End of main body -->
+    <script>
+    function getPosts(){
+    	$.ajax({
+			url:"load_post.jsp",
+			success:function(data,textStatus,jqXHR){
+				console.log(data);
+				$("#loader").hide();
+				$("#post-container").html(data);
+			}
+		})
+    }
+    	$(document).ready(function (e){
+    		getPosts();
+    	})
+    	
+    </script>
     </body>
     </html>

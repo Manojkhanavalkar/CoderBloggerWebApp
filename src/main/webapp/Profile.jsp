@@ -57,9 +57,7 @@
       %>
 	NAME: <%=usr.getName() %> <br>
 	<div class="img">
-
-        <img src="img/profile/<%=usr.getImage() %>" height="200px" width="200px" alt="hero image" class="profile-photo">
- <br>
+        <img src="img/profile/<%=usr.getImage() %>"alt="hero image" class="profile-photo"><br>
          <br>
       </div>
 
