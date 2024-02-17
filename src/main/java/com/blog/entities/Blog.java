@@ -6,6 +6,7 @@ public class Blog {
 	int post_id;
 	String postPic;
 	String title;
+	String emailId;
 	String content;
 	String gitlink;
 	Timestamp created_at;
@@ -19,6 +20,15 @@ public class Blog {
 		this.postPic=photo_path;
 		this.category=category;
 		this.cat_id=cat_id;
+		this.created_at=created_at;
+	}
+	public Blog(int post_id,String title,String content,String gitlink,String photo_path,String emailId,Timestamp created_at){
+		this.post_id=post_id;
+		this.title=title;
+		this.content=content;
+		this.gitlink=gitlink;
+		this.postPic=photo_path;
+		this.emailId=emailId;
 		this.created_at=created_at;
 	}
 	public String getTitle() {
@@ -44,6 +54,9 @@ public class Blog {
 	}
 	public String getGitlink() {
 		return gitlink;
+	}
+	public String getemailId() {
+		return emailId;
 	}
 	
 }

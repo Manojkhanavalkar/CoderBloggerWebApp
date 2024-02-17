@@ -61,7 +61,7 @@
     				<div class="catagory-table">
     				<table>
     				<tr>
-    					<th><a href="#" onclick="getPosts(0)" class="list-group-item list-group-item-action">All post</a></th>
+    					<th><a href="#" onclick="getPosts(0,this)" class=" c-link list-group-item list-group-item-action active">All post</a></th>
     					</tr>
     					<%
     						PostDao p=new PostDao(ConnectionProvider.getConnection());
@@ -69,7 +69,7 @@
     						for(Category c:list1){
     					%>
     					<tr>
-    					<th><a href="#" onclick="getPosts(<%=c.getCid() %>)" class="list-group-item list-group-item-action"><%=c.getName() %></a><br></th>
+    					<th><a href="#" onclick="getPosts(<%=c.getCid() %>,this)" class="c-link list-group-item list-group-item-action"><%=c.getName() %></a><br></th>
     					</tr>
     					<%} %>
     				
@@ -91,26 +91,27 @@
     
     <!-- End of main body -->
     <script>
-    function getPosts(catId){
+    function getPosts(catId,temp){
     	
     	$("#loader").show();
     	$("#post-container").hide();
+    	$(".c-link").removeClass('active');
     	
     	$.ajax({
 			url:"load_post.jsp",
 			data:{cid:catId},
 			success:function(data,textStatus,jqXHR){
 				console.log(data);
+				$("#loader").hide();
+			    $("#post-container").show();
 				$("#post-container").html(data);
-			},
-		    complete: function () {
-		        $("#loader").hide();
-		        $("#post-container").show();
-		    }
+				$(temp).addClass('active');
+			}
 		})
     }
     	$(document).ready(function (e){
-    		getPosts(0);
+    		let allPostRef=$('.c-link')[0]
+    		getPosts(0,allPostRef);
     	})
     	
     </script>

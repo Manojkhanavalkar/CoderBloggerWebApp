@@ -38,8 +38,12 @@
 			 <img src="img/blogImage/<%=b.getPostPic()%>" class="card-img-top" alt="...">
 				<div class="card-body">
 					<b><%=b.getTitle() %></b>
-					<p><%=b.getContent() %></p>
 				</div>
+					<div class="card-footer text-center">
+						<a href="show_blog_page.jsp?post_id=<%=b.getPost_id()%>" class="btn btn-outline-primary btn-sm">Read more...</a>
+						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span>10</span> </a>
+						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span>20</span> </a>
+					</div>
 			</div>
 		</div>
 		<%

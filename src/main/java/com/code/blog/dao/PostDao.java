@@ -1,6 +1,4 @@
 package com.code.blog.dao;
-import java.sql.Timestamp;
-
 import java.sql.*;
 import com.blog.entities.Blog;
 import java.util.ArrayList;
@@ -81,5 +79,30 @@ public class PostDao {
 			e.printStackTrace();
 		}
 		return list;
+	}
+	public Blog getPostByPostId(int postId) {
+		Blog post=null;
+		try {
+			String q="select * from blogs where post_id=?";
+			PreparedStatement p=this.con.prepareStatement(q);
+			p.setInt(1, postId);
+			ResultSet set=p.executeQuery();
+			if(set.next()) {
+				int post_id=set.getInt("post_id");
+				String title=set.getString("title");
+				String content=set.getString("content");
+				String photo_path=set.getString("photo_path");
+				String gitlink=set.getString("gitlink");
+				String emailId=set.getString("email");
+				Timestamp created_at=set.getTimestamp("created_at");
+				
+				post=new Blog( post_id, title, content, gitlink, photo_path, emailId, created_at);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return post;
 	}
 }
