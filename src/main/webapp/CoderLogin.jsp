@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Animated Login Form | CodingNepal</title>
+    <title>login</title>
     <link rel="stylesheet" href="CSS/login.css" />
      <link rel="stylesheet" href="CSS/homestyle.css" />
   </head>
