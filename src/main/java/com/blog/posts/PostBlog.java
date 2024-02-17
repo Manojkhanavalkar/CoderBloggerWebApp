@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -51,7 +53,15 @@ public class PostBlog extends HttpServlet{
 			Class.forName("org.postgresql.Driver");
 			Connection con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/coderblogger","postgres","Manoj@123");
 			System.out.println("Database opened successfully inside postblog");
-			String query="insert into blogs (email,title,content,category,gitlink,photo_path) values(?,?,?,?,?,?);";
+			//code to cid from category table
+			int cid=0;
+			PreparedStatement ps=con.prepareStatement("Select cid from categories where category=?");
+			ps.setString(1, category);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				cid=rs.getInt("cid");//done adding category id
+			}
+			String query="insert into blogs (email,title,content,category,gitlink,photo_path,cid) values(?,?,?,?,?,?,?);";
 			PreparedStatement stmt;
 			stmt=con.prepareStatement(query);
 			stmt.setString(1, email);
@@ -60,6 +70,7 @@ public class PostBlog extends HttpServlet{
 			stmt.setString(4, category);
 			stmt.setString(5, gitLink);
 			stmt.setString(6, imageFileName);
+			stmt.setInt(7, cid);
 			int row=stmt.executeUpdate();
 			if(row>0) {
 				out.println("<script type=\"text/javascript\">");

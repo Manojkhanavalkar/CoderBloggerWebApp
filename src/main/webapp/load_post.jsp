@@ -2,6 +2,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.coderblogger.helper.ConnectionProvider"%>
 <%@page import="com.code.blog.dao.PostDao"%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -16,8 +17,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <div class="row">
 <%
+	Thread.sleep(1000);
 	PostDao d=new PostDao(ConnectionProvider.getConnection());
-	List<Blog> posts=d.getAllPosts();
+	int cid=Integer.parseInt(request.getParameter("cid"));
+	List<Blog> posts=null;
+	if(cid==0){
+		 posts=d.getAllPosts();
+	}else{
+		 posts=d.getPostByCatId(cid);
+	}
+	if(posts.size()==0){
+		out.println("<h3 class='display-3 text-center'>No Posts Yet in this Category</h3>");
+		return;
+	}
 	for(Blog b:posts){
 		%>
 		
