@@ -1,10 +1,9 @@
- <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="java.sql.*"%>
-    <%@page import="com.coderblogger.helper.ConnectionProvider"%>
-    <%@page import="in.sp.backend.Profile" %>
-    <%@page import="in.sp.backend.User" %>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%@page import="com.coderblogger.helper.ConnectionProvider"%>
+<%@page import="in.sp.backend.Profile" %>
+<%@page import="in.sp.backend.User" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -38,9 +37,6 @@
           	</ul>
           	</li>
         </ul>
-        <a href="" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
     </header>
     
     <div class="container">
@@ -56,11 +52,12 @@
        <img src="img/coder_blogger.png" height="150" width="150">
       </div>
        
-	<h2>NAME: <%=usr.getName() %></h2>
+	<h2> <%=usr.getName() %></h2>
       
-      <p>ABOUT ME:<%=usr.getAbout_me() %></p>
+      <p>ABOUT ME <br><%=usr.getAbout_me() %></p>
 	<a href="createblog.jsp"> <button>create blog</button> </a>
 	<%} %>
   </div>
+
   </body>
   </html>
