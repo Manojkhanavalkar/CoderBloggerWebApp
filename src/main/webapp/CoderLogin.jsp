@@ -1,54 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-    <title>Coder Blogger</title>
-    <link rel="stylesheet" type="text/css" href="CSS/mystyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="CSS/login.css" />
+     <link rel="stylesheet" href="CSS/homestyle.css" />
   </head>
   <body>
-    <img class="wave" src="img/coder_blogger.png">
-    <div class="container">
-      <div class="img">
-        <img src="">
-      </div>
-      <div class="login-content">
-        <form action="LoginForm" method="post">
-          <img src="img/avatar.svg"> 
-          <h2 class="title">Welcome</h2>
-          <div class="input-div one">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="div">
-              <h5>Email</h5>
-              <input type="email" class="input" name="email">
-            </div>
-          </div>
-          <div class="input-div pass">
-            <div class="i"> 
-              <i class="fas fa-lock"></i>
-            </div>
-            <div class="div">
-              <h5>Password</h5>
-              <input type="password" class="input" name="password">
-            </div>
-          </div>
-          <a href="#">Forgot Password?</a>
-          <input type="submit" class="btn" value="Login">
-          <div class="login_link">
-                  Don't Have an Account ? <a href="CoderRegister.jsp">Signup Here</a>
-              </div>
-        </form>
-      </div>
+   <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Coder Blogger</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+        </label>
+        <ul class="links">
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="#">About Developers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="CoderLogin.jsp" class="signin">Log In</a>
+          <a href="CoderRegister.jsp" class="signup">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+   
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required />
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login" />
+        <div class="signup_link">Not a member? <a href="#">Signup</a></div>
+      </form>
     </div>
-    <script type="text/javascript" src="JS/main.js"></script>
   </body>
 </html>
-
-
-
+    

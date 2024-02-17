@@ -22,6 +22,77 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navbar .buttons .signin:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons .signup:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+
+
 .center{
   position: absolute;
   top: 50%;
@@ -84,7 +155,7 @@ form .txt_field{
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
   top: -5px;
-  color: #ffffff;
+  color: #ffffff;;
 }
 
 .txt_field input:focus ~ span::before,
@@ -184,7 +255,7 @@ form{
 
 .login-content h2{
 	margin: 15px 0;
-	color: #333;
+	color: #ffffff;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
@@ -225,10 +296,10 @@ form{
 	transform: translateY(-50%);
 	color: #999;
 	font-size: 18px;
-	transition: .3s;
+	pointer-events: none;
 }
 
-.input-div:before, .input-div:after{
+.input-div::before {
 	content: '';
 	position: absolute;
 	bottom: -2px;
@@ -240,19 +311,23 @@ form{
 
 .input-div:before{
 	right: 50%;
+	color: #fff;
 }
 
 .input-div:after{
 	left: 50%;
+	color: #fff;
 }
 
 .input-div.focus:before, .input-div.focus:after{
 	width: 50%;
+	color: #fff;
 }
 
 .input-div.focus > div > h5{
 	top: -5px;
-	font-size: 15px;
+	font-size: 5px;
+	color: #fff;
 }
 
 .input-div.focus > .i > i{
@@ -270,7 +345,7 @@ form{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: #555;
+	color: #fff;
 	font-family: 'poppins', sans-serif;
 }
 
