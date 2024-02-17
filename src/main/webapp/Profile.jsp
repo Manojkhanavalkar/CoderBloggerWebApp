@@ -22,7 +22,7 @@
         <i class= "fa fa bars menu-toggle"></i>
         <ul class="nav">
       
-          <li><a href="index.jsp">Home</a></li> 
+          <li><a href="index.jsp">Feed</a></li> 
           <li><a href="#">About Developers</a></li>
           <li><a href="#">Contact Us</a></li>
            <li><a href="createblog.jsp">New Blog</a></li>
