@@ -18,26 +18,26 @@
     
     <div class="center">
     <div class="btn_box">
-    <a href="profile.jsp" class="icon_btn"> &times </a>
+    <a href="Profile.jsp" class="icon_btn"> &times </a>
     </div>
       <h1>Change Password</h1>
-      <form method="post" action="change_passwordForm">
+      <form method="post" action="changePasswordForm">
         <div class="txt_field">
-          <input type="password" required name="password" />
+          <input type="password" required name="oldpassword" />
           <span></span>
           <label>Old Password</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password"/>
+          <input type="password" required name="newPassword"/>
           <span></span>
           <label>New Password</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password"/>
+          <input type="password" required name="confirmPassword"/>
           <span></span>
           <label>Confirm Password</label>
         </div>
-        <div class="pass">Forgot Password?</div>
+        <a class="pass" href="forgot_password.jsp">Forgot Password?</a>
         <input type="submit" value="Login" />
         <div class="signup_link">Not a member? <a href="#">Signup</a></div>
       </form>

@@ -18,22 +18,22 @@
     
     <div class="center">
     <div class="btn_box">
-    <a href="profile.jsp" class="icon_btn"> &times </a>
+    <a href="CoderLogin.jsp" class="icon_btn"> &times </a>
     </div>
       <h1>Forgot Password</h1>
-      <form method="post" action="forgot_passwordForm">
+      <form method="post" action="forgotPasswordForm">
         <div class="txt_field">
           <input type="email" required name="email" />
           <span></span>
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password"/>
+          <input type="password" required name="newPassword"/>
           <span></span>
           <label>New Password</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password"/>
+          <input type="password" required name="confirmPassword"/>
           <span></span>
           <label>Confirm Password</label>
         </div>

@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <div class="row">
 <%
-	Thread.sleep(1000);
+	Thread.sleep(100);
 	PostDao d=new PostDao(ConnectionProvider.getConnection());
 	int cid=Integer.parseInt(request.getParameter("cid"));
 	List<Blog> posts=null;

@@ -22,7 +22,7 @@
         <i class= "fa fa bars menu-toggle"></i>
         <ul class="nav">
       
-          <li><a href="index.jsp">Feed</a></li> 
+          <li><a href="Feed.jsp">Feed</a></li> 
           <li><a href="#">About Developers</a></li>
           <li><a href="#">Contact Us</a></li>
            <li><a href="createblog.jsp">New Blog</a></li>
@@ -32,7 +32,7 @@
           	</a>
           	<ul>
           	<li><a href="updateProfile.jsp" class= "edit profile">Edit Profile</a></li>
-          	<li><a href="#" class="change password" >Change Password</a></li>
+          	<li><a href="change_password.jsp" class="change password" >Change Password</a></li>
           	<li><a href="Logout" class="logout" >Logout</a></li>
           	</ul>
           	</li>

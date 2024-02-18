@@ -45,7 +45,7 @@
           <span></span>
           <label>Password</label>
         </div>
-        <div class="pass">Forgot Password?</div>
+        <a class="pass" href="forgot_password.jsp">Forgot Password?</a>
         <input type="submit" value="Login" />
         <div class="signup_link">Not a member? <a href="#">Signup</a></div>
       </form>
