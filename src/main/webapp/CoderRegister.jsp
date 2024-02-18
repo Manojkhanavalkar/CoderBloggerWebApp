@@ -5,31 +5,19 @@
 <head>
 <meta charset="UTF-8" />
 <title>registration</title>
-<link href="CSS/mystyle.css" rel="stylesheet" type="text/css">
-<link href="CSS/homestyle.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="CSS/signup.css" />
 </head>
 <body>
- <body>
-   <header class="header">
+<header class="header">
       <nav class="navbar">
         <h2 class="logo"><a href="#">Coder Blogger</a></h2>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" id="hamburger-btn">
-        </label>
-        <ul class="links">
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="#">About Developers</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="buttons">
-          <a href="CoderLogin.jsp" class="signin">Log In</a>
-          <a href="CoderRegister.jsp" class="signup">Sign Up</a>
-        </div>
-      </nav>
-    </header>
+       </nav>
+       </header>
     
-<div class="container">
       <div class="center">
+       <div class="btn_box">
+    <a href="index.jsp" class="icon_btn"> &times </a>
+    </div>
           <h1>Register</h1>
           <form method="POST" action="RegisterForm"><!-- here i have added the action of java class so don't change that  --> 
               <div class="txt_field">

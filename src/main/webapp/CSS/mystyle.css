@@ -93,14 +93,14 @@ body{
 }
 
 
-.center{
+.center {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 52%;
   transform: translate( -50%, -50%);
-  width: 24vw;
+  width: 25vw;
   background: white;
-  border-radius: 20px;
+  border-radius: 26px;
 }
 
 .center h1{
@@ -184,7 +184,7 @@ input[type="Submit"]{
 
 }
 
-input[type="Submit"]:hover{
+input[type="Submit"]:hover {
   background: #2691d9;
   color: #e9f4fb;
   transition: .5s;

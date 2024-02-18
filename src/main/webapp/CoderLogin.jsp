@@ -30,7 +30,10 @@
     </header>
    
     <div class="center">
-      <h1>Login</h1>
+    <div class="btn_box">
+    <a href="index.jsp" class="icon_btn"> &times </a>
+    </div>
+      <h1>LOGIN</h1>
       <form method="post" action="LoginForm">
         <div class="txt_field">
           <input type="email" required name="email" />
