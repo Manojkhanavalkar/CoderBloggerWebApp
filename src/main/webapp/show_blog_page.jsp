@@ -1,4 +1,6 @@
 
+<%@page import="com.code.blog.dao.LikeDao"%>
+<%@page import="in.sp.backend.User"%>
 <%@page import="com.code.blog.dao.UserDao"%>
 <%@page import="com.coderblogger.helper.ConnectionProvider"%>
 <%@page import="com.code.blog.dao.PostDao"%>
@@ -25,6 +27,8 @@
 <head>
 <meta charset="UTF-8">
 <title><%=b.getTitle() %></title>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0" nonce="KZn0Ip0f"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -38,6 +42,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/likeJs.js"></script>
     <style type="text/css">
     	.post-title{
     		font-weight: 500;
@@ -59,8 +64,11 @@
     		padding: 10px;
     	}
     </style>
+    
 </head>
 <body>
+<div id="fb-root"></div>
+
 	<div class="container">
 		<div class="row my-4">
 			<div class="col-md-8 offset-md-2">
@@ -90,8 +98,23 @@
 						
 					</div>
 					<div class="card-footer text-right">
-						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span>10</span> </a>
+					
+						<%
+							LikeDao ld=new LikeDao(ConnectionProvider.getConnection());
+						%>
+						
+						<a href="#!" onclick="doLike('<%=b.getPost_id() %>', '<%=session.getAttribute("email_id") %>')" class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span class="like-counter"><%=ld.countLikeOnPost(b.getPost_id()) %></span> </a>
 						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span>20</span> </a>
+					</div>
+					<div class="card-footer">
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+					<div id="gplus-cm"></div>
+					<script type="text/javascript">
+ 						 jQuery(document).ready(function($) {
+   						 $('#gplus-cm').html('<div class="g-comments" data-width="543" data-href="http://nampnq.vietnamcode.info" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>');
+  						});
+					</script>
+					<script async type="text/javascript" src="http://apis.google.com/js/plusone.js?callback=gpcb"></script>
 					</div>
 				</div>
 			</div>

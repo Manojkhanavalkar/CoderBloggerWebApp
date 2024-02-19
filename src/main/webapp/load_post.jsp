@@ -1,3 +1,4 @@
+<%@page import="com.code.blog.dao.LikeDao"%>
 <%@page import="com.blog.entities.Blog"%>
 <%@page import="java.util.List"%>
 <%@page import="com.coderblogger.helper.ConnectionProvider"%>
@@ -15,6 +16,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/likeJs.js"></script>
+    
 <div class="row">
 <%
 	Thread.sleep(100);
@@ -40,8 +43,12 @@
 					<b><%=b.getTitle() %></b>
 				</div>
 					<div class="card-footer text-center">
+						<%
+							LikeDao ld=new LikeDao(ConnectionProvider.getConnection());
+							
+						%>
 						<a href="show_blog_page.jsp?post_id=<%=b.getPost_id()%>" class="btn btn-outline-primary btn-sm">Read more...</a>
-						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span>10</span> </a>
+						<a href="#!"  class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span class="like-counter"><%=ld.countLikeOnPost(b.getPost_id()) %></span> </a>
 						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span>20</span> </a>
 					</div>
 			</div>
