@@ -27,7 +27,7 @@ public class PostBlog extends HttpServlet{
 		PrintWriter out=resp.getWriter();
 		String category=req.getParameter("category");
 		String title=req.getParameter("postTitle");
-		String content=req.getParameter("postContent");
+		String content=req.getParameter("content");
 		String gitLink=req.getParameter("githubLink");
 		Part file=req.getPart("blogImage");
 		String imageFileName=file.getSubmittedFileName();

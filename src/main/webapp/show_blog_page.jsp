@@ -28,7 +28,7 @@
 <meta charset="UTF-8">
 <title><%=b.getTitle() %></title>
 
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0" nonce="KZn0Ip0f"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -107,14 +107,14 @@
 						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span>20</span> </a>
 					</div>
 					<div class="card-footer">
-					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-					<div id="gplus-cm"></div>
-					<script type="text/javascript">
- 						 jQuery(document).ready(function($) {
-   						 $('#gplus-cm').html('<div class="g-comments" data-width="543" data-href="http://nampnq.vietnamcode.info" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>');
-  						});
-					</script>
-					<script async type="text/javascript" src="http://apis.google.com/js/plusone.js?callback=gpcb"></script>
+					<script src="https://apis.google.com/js/plusone.js">
+</script>
+<div class="g-comments"
+    data-href="http://stackoverflow.com"
+    data-width="580"
+    data-first_party_property="BLOGGER"
+    data-view_type="FILTERED_POSTMOD">
+</div>
 					</div>
 				</div>
 			</div>

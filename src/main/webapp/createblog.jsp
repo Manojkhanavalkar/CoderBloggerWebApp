@@ -120,7 +120,7 @@ body {
           </header>
   <div class="container">
     <h1>Create Blog Post</h1>
-    <form action="submitpost" method="post" enctype="multipart/form-data">
+    <form action="submitpost" method="post" enctype="multipart/form-data" onsubmit="prepareContent()">
     <%
     	Connection con=ConnectionProvider.getConnection();
     %>
@@ -143,8 +143,8 @@ body {
       </div>
       <div class="form-group">
         <label for="postContent">Content:</label>
-        <div id="editor" style="height: 150px;"></div>
-        <textarea type="text" id="content" name="content" style="display:none;"> </textarea> <br>
+        <div id="editor"  style=" height: 150px;"></div>
+        <input type="hidden" id="content" name="content" style="display:none;">  <br>
 
         <label for="githubLink">GitHub Link:</label>
         <input type="url" id="githubLink" name="githubLink" pattern="https:\/\/github\.com\/.+" required> <br>
@@ -152,7 +152,7 @@ body {
       </div>
       <div class="form-group">
         <label for="image">Upload Picture:</label>
-        <input type="file" id="image" name="image">
+        <input type="file" id="image" name="blogImage">
       </div>
       <button type="submit">Post</button>
     </form>
@@ -170,7 +170,13 @@ body {
     contentInput.value = quill.root.innerHTML;
   });
 });
+ function prepareContent() {
+     // Get the content from the div with id 'editor'
+     var content = $('#editor').html();
 
+     // Set the content as the value of the hidden input field with id 'content'
+     $('#content').val(content);
+ }
   </script>
 </body>
 </html>
