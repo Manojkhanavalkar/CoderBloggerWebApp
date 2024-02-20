@@ -8,6 +8,11 @@ public class LikeDao {
 	public boolean insertLike(int post_id,String email_id) {
 		boolean f=false;
 		try {
+			if(isLikedByUser(post_id, email_id)) {
+				if(deleteLike(post_id, email_id)) {
+					return f;
+				}
+			}
 			String query="insert into likes (post_id,email_id) values(?,?)";
 			PreparedStatement ps=this.con.prepareStatement(query);
 			//values set...

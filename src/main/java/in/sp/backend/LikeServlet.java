@@ -25,9 +25,19 @@ public class LikeServlet extends HttpServlet{
 //		out.println(post_id);
 //		out.println(email_id);
 		LikeDao ldao=new LikeDao(ConnectionProvider.getConnection());
-		if(operation.equals("like")) {
-			boolean f= ldao.insertLike(post_id, email_id);
-			out.println(f);
-		}
+		if (operation.equals("like")) {
+            boolean isLiked = ldao.isLikedByUser(post_id, email_id);
+
+            if (isLiked) {
+                boolean unlikeSuccess = ldao.deleteLike(post_id, email_id);
+                out.println(!unlikeSuccess); // Return false if unlike was successful
+            } else {
+                boolean likeSuccess = ldao.insertLike(post_id, email_id);
+                out.println(likeSuccess); // Return true if like was successful
+            }
+        }else if(operation.equals("getLikeCount")) {
+            int likeCount = ldao.countLikeOnPost(post_id);
+            out.println(likeCount);
+        }
 	}
 }
