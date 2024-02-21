@@ -37,9 +37,9 @@
           <span></span>
           <label>Confirm Password</label>
         </div>
-        <a class="pass" href="forgot_password.jsp">Forgot Password?</a>
-        <input type="submit" value="Login" />
-        <div class="signup_link">Not a member? <a href="#">Signup</a></div>
+        <a class="pass" href="forgot_password.jsp">Forgot Password?</a><br><br>
+        <input type="submit" value="Submit" />
+        <div class="signup_link">Use Strong Password </div>
       </form>
     </div>
 </body>
