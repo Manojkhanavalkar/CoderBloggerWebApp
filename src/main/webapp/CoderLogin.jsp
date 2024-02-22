@@ -9,6 +9,7 @@
     <title>login</title>
     <link rel="stylesheet" href="CSS/login.css" />
      <link rel="stylesheet" href="CSS/homestyle.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
    <header class="header">
@@ -42,8 +43,9 @@
         </div>
         <div class="txt_field">
           <input type="password" required name="password"/>
-          <span></span>
-          <label>Password</label>
+           <label>Password</label>
+          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+         
         </div>
         <a class="pass" href="forgot_password.jsp">Forgot Password?</a><br><br>
         <input type="submit" value="Login" />

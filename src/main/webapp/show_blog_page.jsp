@@ -43,7 +43,49 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="JS/likeJs.js"></script>
-    <style type="text/css">
+    <style>
+    
+    .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+    
     	.post-title{
     		font-weight: 500;
     		font-size: 30px;
@@ -67,6 +109,28 @@
     
 </head>
 <body>
+
+<body>
+    <header class="header">
+     <nav class="title">
+        <h1 class="title-text">Coder Blogger</h1>
+      </nav>
+        <ul class="nav">
+      
+          <li><a href="index.jsp">Home</a></li> 
+          <li><a href="#">Contact Us</a></li>
+           <li>
+          	<a href="Profile.jsp">Profile
+          	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+          	</a>
+          	<ul>
+          	<li><a href="/CoderBlogger/Profile.jsp" class= "myblog" >${coder_name}</a></li>
+          	<li><a href="Logout" class="logout" >Logout</a></li>
+          	</ul>
+          	</li>
+        </ul>
+    </header>
+    
 <div id="fb-root"></div>
 
 	<div class="container">
