@@ -227,12 +227,12 @@ input[type="Submit"]:hover {
 <div class="container">
       <div class="center">
       <div class="btn_box">
-    <a href="CoderLogin.jsp" class="icon_btn"> &times </a>
+    <a href="Profile.jsp" class="icon_btn"> &times </a>
     </div>
           <h1>Update Profile</h1><br>
           <form action="updateProfile" method="post" enctype="multipart/form-data">
           <label for="postContent">About me:</label><br>
-        <textarea id="postContent" name="postContent" rows="6" cols="40" required></textarea><br>
+        <textarea id="postContent" name="about_me" rows="6" cols="40" required></textarea><br>
      
 		   Upload Profile photo:<input type="file" name="ProfileImage" value=""> <br><br>
 		 

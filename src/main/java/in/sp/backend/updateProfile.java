@@ -58,6 +58,9 @@ public class updateProfile extends HttpServlet {
 			PreparedStatement stmt;
 			jakarta.servlet.http.HttpSession session = request.getSession();
 			String email=(String) session.getAttribute("email_id");//we have got the email id here which is primary key
+			PreparedStatement ps=con.prepareStatement("delete from profile where email_id=?");
+			ps.setString(1, email);
+			ps.executeUpdate();
 			String query="insert into profile values(?,?,?);";
 			stmt=con.prepareStatement(query);
 			stmt.setString(1, email);

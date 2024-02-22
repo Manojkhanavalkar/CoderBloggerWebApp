@@ -43,7 +43,8 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="JS/likeJs.js"></script>
-    <style type="text/css">
+    <style>
+    
     	.post-title{
     		font-weight: 500;
     		font-size: 30px;
@@ -67,6 +68,8 @@
     
 </head>
 <body>
+	
+
 <div id="fb-root"></div>
 
 	<div class="container">
@@ -104,21 +107,60 @@
 						%>
 						
 						<a href="#!" onclick="doLike('<%=b.getPost_id() %>', '<%=session.getAttribute("email_id") %>')" class="btn btn-outline-primary btn-sm"> <i class="fa fa-thumbs-o-up"></i> <span class="like-counter"><%=ld.countLikeOnPost(b.getPost_id()) %></span> </a>
-						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span>20</span> </a>
+						<a href="#!" class="btn btn-outline-primary btn-sm"> <i class="fa fa-commenting-o"></i> <span></span> </a>
 					</div>
 					<div class="card-footer">
-					<script src="https://apis.google.com/js/plusone.js">
-</script>
-<div class="g-comments"
-    data-href="http://stackoverflow.com"
-    data-width="580"
-    data-first_party_property="BLOGGER"
-    data-view_type="FILTERED_POSTMOD">
-</div>
+					<!-- Comments are Here I want to take this post id to Comment servlet so adding some hidden input tag -->
+					<textarea rows="3" cols="70" placeholder="Enter text here..." name="comment" form="comment-form" id="comment-area"></textarea><br>
+					<form  id="comment-form" >
+						<input type="hidden" name="post_id" value=<%=b.getPost_id() %> >
+						<input type="submit" value="Leave a comment!!" >
+					</form>
+					<!-- need to show all comment here using Ajax jQuery -->
+					<div id="comments">
+						
+					</div>
+					<a href="Feed.jsp"> <button>Back</button> </a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+        $(document).ready(function () {
+            // Submit comment form using Ajax
+            $('#comment-form').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'CommentServlet',
+                    data: $('#comment-form').serialize(),
+                    success: function () {
+                        // On success, reload comments dynamically
+                        loadComments();
+                    }
+                });
+            });
+
+            // Load comments initially
+            loadComments();
+            
+         // Reset the comment form
+            $('#comment-area')[0].reset();
+
+
+            // Function to load comments dynamically
+            function loadComments() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'LoadCommentsServlet', // You need to create a servlet to load comments
+                    data: { post_id: <%= postId %> },
+                    success: function (data) {
+                        $('#comments').html(data);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
