@@ -70,7 +70,7 @@
 <body>
 	
 
-<div id="fb-root"></div>
+
 
 	<div class="container">
 		<div class="row my-4">
@@ -138,6 +138,8 @@
                     success: function () {
                         // On success, reload comments dynamically
                         loadComments();
+                     // Reset the comment form
+                        $('#comment-form')[0].reset();
                     }
                 });
             });
@@ -145,8 +147,8 @@
             // Load comments initially
             loadComments();
             
-         // Reset the comment form
-            $('#comment-area')[0].reset();
+         
+            
 
 
             // Function to load comments dynamically
