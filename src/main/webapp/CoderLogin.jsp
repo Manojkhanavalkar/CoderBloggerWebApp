@@ -42,7 +42,7 @@
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" name="" id="password" required />
+          <input type="password" name="password" id="password" required />
            
           <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
           <label>Password</label>
