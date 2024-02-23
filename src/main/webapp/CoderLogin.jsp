@@ -49,7 +49,7 @@
         </div>
         <a class="pass" href="forgot_password.jsp">Forgot Password?</a><br><br>
         <input type="submit" value="Login" />
-        <div class="signup_link">Not a member? <a href="#">Signup</a></div>
+        <div class="signup_link">Not a member? <a href="CoderRegister.jsp">Signup</a></div>
       </form>
     </div>
     <script>

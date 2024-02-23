@@ -48,7 +48,7 @@
       	for(User usr:list){
       %>
        <div class="avatar-flip">
-       <img src="img/profile/<%=usr.getImage() %>"class="profile-photo" height="150" width="150">
+       <img src="img/profile/<%=usr.getImage() %>" onerror="this.src='/img/avatar.svg'" alt="Profile image here" class="profile-photo" height="150" width="150">
        <img src="img/coder_blogger.png" height="150" width="150">
       </div>
        
