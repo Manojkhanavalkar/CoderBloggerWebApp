@@ -11,7 +11,7 @@
 <title>About Developers</title>
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<!-- CSS file  -->
+<!-- CSS file -->
 
 <style>
 	
