@@ -155,6 +155,7 @@
                 <h3> Email</h3>
                 <p>awantmishra1@gmail.com</p>
                 <p>pankit26mishra711@gmail.com</p>
+                <p>khanavalkarmanoj@gmail.com</p>
                 
                 
 
