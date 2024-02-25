@@ -387,7 +387,7 @@ span {
           <li><a href="index.jsp">Home</a></li>
           <li><a href="Feed.jsp" target="_blank">Feed</a></li>
           <li><a href="#">About Developers</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact_us.jsp">Contact Us</a></li>
         </ul>
         <div class="buttons">
           <a href="CoderLogin.jsp" class="signin">Log In</a>

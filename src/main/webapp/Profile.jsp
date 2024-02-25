@@ -24,7 +24,7 @@
       
           <li><a href="Feed.jsp">Feed</a></li> 
           <li><a href="about.jsp">About Developers</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact_us.jsp">Contact Us</a></li>
            <li><a href="createblog.jsp">New Blog</a></li>
            <li>
           	<a href="#">Account

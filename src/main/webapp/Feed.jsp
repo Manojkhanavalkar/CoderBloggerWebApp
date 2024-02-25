@@ -47,7 +47,7 @@
         <ul class="nav">
       
           <li><a href="index.jsp" style="color: #f8f9fa;">Home</a></li> 
-          <li><a href="#" style="color: #f8f9fa;">Contact Us</a></li>
+          <li><a href="contact_us.jsp" style="color: #f8f9fa;">Contact Us</a></li>
            <li>
           	<a href="Profile.jsp" style="color: #f8f9fa;">Profile
           	<i class="fa fa-chevron-down" style="font-size: .8em;"></i>
