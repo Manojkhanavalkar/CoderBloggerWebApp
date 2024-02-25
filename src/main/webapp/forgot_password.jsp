@@ -76,7 +76,7 @@
           <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
           <label>Confirm Password</label>
         </div>
-        <div class="pass">Forgot Password?</div>
+        
         <input type="submit" value="Confirm" />
         <div class="signup_link"> Next time se yaad rkhna warna,.. <a href="#"></a></div>
       </form>
