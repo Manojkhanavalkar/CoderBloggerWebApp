@@ -394,10 +394,6 @@ span {
           <a href="CoderRegister.jsp" class="signup">Sign Up</a>
         </div>
       </nav>
-	
-		
-		
-		<i class='bx bx-menu' id="menu-icon"></i>
 	</header>
 	
 	<section class="about" id="about">

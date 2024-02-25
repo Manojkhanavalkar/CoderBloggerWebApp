@@ -13,6 +13,105 @@
 	
 </head>
 <style>
+
+		* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 108%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+	font-size: 1.8rem;
+	color: #fff;
+	font-weight: 600;
+	cursor: default;
+	text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 35px;
+}
+
+ .navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+ 
+  text-decoration: none;
+  color: white;
+  margin-left: 5rem;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 44px;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons a:not(:last-child) {
+  margin-right: -15px;
+  margin-left: 136px;
+}
+
+.navbar .buttons .signin:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons .signup:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+
+#menu-icon {
+	font-size: 3.6rem;
+	color: #fff;
+	display: none;
+}
+		
 	        body{
             padding: 0;
             margin: 0;
@@ -25,12 +124,19 @@
             flex-direction: column;
             align-items: center;
             padding: 25px;
+            margin-top: 201px;
         }
         hr{
             width: 80%;
         }
+        
+        h1 {
+        	color: white;
+        	font-size: 3em;
+        }
         h2{
             font-size: 20px;
+            color: yellow;
         }
         .contact-items{
             display: flex;
@@ -53,8 +159,9 @@
         }
         .customer-care{
             height: 250px;
-            box-shadow: 0 15px 15px green;
-            border: 1px solid green;
+            box-shadow: 0 15px 15px white;
+            border: 1px solid white;
+            background: burlywood;
         }
         .write-us{
             height: 250px;
@@ -129,36 +236,58 @@
 	
 </style>
 <body>
+	 <header class="header">
+	 	<a href="#" class="logo">Coder Blogger</a>
+	 	<i class='bx bx-menu' id="menu-icon"></i>
+      
+      <nav class="navbar">
+       
+        <ul class="links">
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="Feed.jsp" target="_blank">Feed</a></li>
+          <li><a href="about.jsp">About Developers</a></li>
+          <li><a href="contact_us.jsp">Contact Us</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="CoderLogin.jsp" class="signin">Log In</a>
+          <a href="CoderRegister.jsp" class="signup">Sign Up</a>
+        </div>
+      </nav>
+	
+		
+		
+		<i class='bx bx-menu' id="menu-icon"></i>
+	</header>
 	
     <div class="container">
         <h1>Contact Us</h1>
-        <hr>
+        
         <h2>Have any questions? We'd love to hear from you</h2>
+        <hr>
         <div class="contact-items">
             <div class="customer-care">
             	<a href="#"><i class='bx bxs-home'></i></a>
                 <h3>Address</h3>
-                <p> Dr. D.Y Patil Arts,Commerce and Science College, sant tukaran nagar, Pimpri Pune-411018 Maharashtra</p>
+                <p> Dr. D.Y Patil Arts,Commerce and Science College, sant tukaram nagar, Pimpri Pune-411018 Maharashtra</p>
                 
                 
             </div>
-            <div class="write-us">
+            <div class="customer-care">
+            	
             	<a href="#"><i class='bx bxs-phone-call'></i></a>
-                <h3>PHONE</h3>
-                <p> 7209771231</p>
-                <p> 9309283261</p>
+                <h3>Phone</h3>
+                <p> <strong>Ankit:</strong> 7209771231</p>
+                <p> <strong>Manoj:</strong> 9309283261</p>
                
           
             </div>
-            <div class="sales-market">
-            	<a href="#"></a><i class='bx bxs-envelope'></i>
+            <div class="customer-care">
+            	<a href="#"><i class='bx bxs-envelope'></i></a>
                 <h3> Email</h3>
                 <p>awantmishra1@gmail.com</p>
                 <p>pankit26mishra711@gmail.com</p>
                 <p>khanavalkarmanoj@gmail.com</p>
                 
-                
-
             </div>
         </div>
     </div>
