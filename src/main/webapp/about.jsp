@@ -385,6 +385,7 @@ span {
        
         <ul class="links">
           <li><a href="index.jsp">Home</a></li>
+          <li><a href="Feed.jsp" target="_blank">Feed</a></li>
           <li><a href="#">About Developers</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
@@ -410,9 +411,9 @@ span {
 					<h2><span>Full-stack Developer</span></h2>
 					<p>As a growing full-stack developer, my goal is to continue expanding my skill set, gaining real-world experience, and contributing to innovative projects that make a meaningful impact.</p>
 					<div class="social-media">
-						<a href="#"><i class='bx bxl-instagram'></i></a>
-						<a href="#"><i class='bx bxl-linkedin'></i></a>
-						<a href="#"><i class='bx bxl-github'></i></a>
+						<a href="https://www.instagram.com/ankitmishraa142?igsh=MWpobzM5NGkzYWw0cg==" target="_blank"><i class='bx bxl-instagram'></i></a>
+						<a href="https://www.linkedin.com/in/ankit-kumar-a48ab6297/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+						<a href="https://github.com/Awant-mishra" target="_blank"><i class='bx bxl-github'></i></a>
 					</div>
 				</div>
 			</div>
@@ -425,9 +426,9 @@ span {
 					<h2><span>Full-stack Developer</span></h2>
 					<p>Hello! I'm Manoj, a passionate and motivated full-stack developer eager to embark on a journey in the dynamic world of web development.</p>
 					<div class="social-media">
-						<a href="#"><i class='bx bxl-instagram'></i></a>
-						<a href="#"><i class='bx bxl-linkedin'></i></a>
-						<a href="#"><i class='bx bxl-github'></i></a>
+						<a href="https://www.instagram.com/manoj_khanavalkar/" target="_blank"><i class='bx bxl-instagram'></i></a>
+						<a href="https://www.linkedin.com/in/manoj-khanavalkar-08a09b201/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+						<a href="https://github.com/Manojkhanavalkar" target="_blank"><i class='bx bxl-github'></i></a>
 					</div>
 				 </div>
 			 </div>
