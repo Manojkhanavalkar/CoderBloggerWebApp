@@ -419,7 +419,7 @@ span {
 			 
 			 
 			 <div class="about-box">
-				 <img src="img/manoj.jpeg" alt="">
+				 <img src="img/Manoj-profile-coderblogger.jpg" alt="">
 				 <div class="about-layer">
 					<h4>Manoj</h4>
 					<h2><span>Full-stack Developer</span></h2>
