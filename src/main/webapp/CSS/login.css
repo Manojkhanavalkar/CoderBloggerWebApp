@@ -59,7 +59,7 @@ body {
   color: #2691d9;
   text-shadow: 1px 1px 3px #000000;
   padding: 20px 0;
-  border-bottom: 1px solid silver;
+  margin-top: 7px;
 }
 .center form {
   padding: 0 40px;
