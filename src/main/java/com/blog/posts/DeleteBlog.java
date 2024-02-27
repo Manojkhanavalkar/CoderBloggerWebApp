@@ -26,7 +26,7 @@ public class DeleteBlog extends HttpServlet{
 			ps.setInt(1, postId);
 			ps.executeUpdate();
 			out.println("<script type=\"text/javascript\">");
-			   out.println("alert('Blog delete successfully admin');");//adding message
+			   out.println("alert('Blog deleted successfully!!');");//adding message
 			   out.println("location='Feed.jsp';");
 			   out.println("</script>");
 			RequestDispatcher rd=req.getRequestDispatcher("/Feed.jsp");
