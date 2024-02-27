@@ -1,4 +1,5 @@
 
+<%@page import="com.coderblogger.helper.IsAdminCheck"%>
 <%@page import="com.code.blog.dao.LikeDao"%>
 <%@page import="in.sp.backend.User"%>
 <%@page import="com.code.blog.dao.UserDao"%>
@@ -68,7 +69,7 @@
     
 </head>
 <body>
-	
+
 
 
 
@@ -121,6 +122,16 @@
 						
 					</div>
 					<a href="Feed.jsp"> <button>Back</button> </a>
+					<%
+						if(IsAdminCheck.IsAdmin(session)){
+							%>
+							<form action="delete-post" method="post">
+								<input type="hidden" value=<%=b.getPost_id() %> name="post_id">
+								<input type="submit" value="Delete Blog" style="color: red;">
+							</form>
+							<% 
+						}
+					%>
 					</div>
 				</div>
 			</div>

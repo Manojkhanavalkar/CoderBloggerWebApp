@@ -15,6 +15,7 @@
      <link rel="stylesheet" href="CSS/profile.css" />
   </head>
   <body>
+  
    <header class="header">
      <nav class="title">
         <h1 class="title-text">Coder Blogger</h1>

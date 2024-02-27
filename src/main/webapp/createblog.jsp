@@ -113,6 +113,7 @@ body {
   </style>
 
 <body>
+
     <header class="header">
         <nav class="navbar">
           <h2 class="logo"><a href="#">Coder Blogger</a></h2>
