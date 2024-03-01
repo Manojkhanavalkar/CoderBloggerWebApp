@@ -56,7 +56,7 @@
 	<h2> <%=usr.getName() %></h2>
       
       <p>ABOUT ME <br><%=usr.getAbout_me() %></p>
-	<a href="createblog.jsp"> <button>create blog</button> </a>
+	
 	<%} %>
   </div>
 

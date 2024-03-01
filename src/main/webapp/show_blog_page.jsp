@@ -123,7 +123,9 @@
 					</div>
 					<a href="Feed.jsp"> <button>Back</button> </a>
 					<%
-						if(IsAdminCheck.IsAdmin(session)){
+					String user=(String)session.getAttribute("coder_name");
+					String writer=ud.getUserbyEmailId(b.getemailId()).getCoder_name() ;
+						if(IsAdminCheck.IsAdmin(session)||user.equals(writer)){
 							%>
 							<form action="delete-post" method="post">
 								<input type="hidden" value=<%=b.getPost_id() %> name="post_id">
@@ -132,18 +134,7 @@
 							<% 
 						}
 					%>
-					<%
-						String user=(String)session.getAttribute("coder_name");
-						String writer=ud.getUserbyEmailId(b.getemailId()).getCoder_name() ;
-						if(user.equals(writer)){
-							%>
-							<form action="delete-post" method="post">
-								<input type="hidden" value=<%=b.getPost_id() %> name="post_id">
-								<input type="submit" value="Delete Blog" style="color: red;">
-							</form>
-							<% 
-						}
-					%>
+					
 					</div>
 				</div>
 			</div>
