@@ -115,13 +115,13 @@
 					<textarea rows="3" cols="70" placeholder="Enter text here..." name="comment" form="comment-form" id="comment-area"></textarea><br>
 					<form  id="comment-form" >
 						<input type="hidden" name="post_id" value=<%=b.getPost_id() %> >
-						<input type="submit" value="Leave a comment!!" >
+						<input type="submit" value="Leave a comment!!" class="btn btn-outline-success">
 					</form>
 					<!-- need to show all comment here using Ajax jQuery -->
 					<div id="comments">
 						
 					</div>
-					<a href="Feed.jsp"> <button>Back</button> </a>
+					<a href="Feed.jsp" > <button class="btn btn-outline-secondary my-3">Back</button> </a>
 					<%
 					String user=(String)session.getAttribute("coder_name");
 					String writer=ud.getUserbyEmailId(b.getemailId()).getCoder_name() ;
@@ -129,7 +129,7 @@
 							%>
 							<form action="delete-post" method="post">
 								<input type="hidden" value=<%=b.getPost_id() %> name="post_id">
-								<input type="submit" value="Delete Blog" style="color: red;">
+								<input type="submit" value="Delete Blog"  class="btn btn btn-danger btn-sm my-4 ">
 							</form>
 							<% 
 						}
