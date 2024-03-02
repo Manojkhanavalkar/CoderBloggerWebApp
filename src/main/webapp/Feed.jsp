@@ -33,7 +33,15 @@
     <style type="text/css">
     #post-container {
     overflow-y: auto; /* or overflow-y: scroll; */
+    
     height: 600px;
+}
+#post-container::-webkit-scrollbar {
+    width: 5px; /* For Chrome, Safari, and Opera */
+}
+
+#post-container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* For Chrome, Safari, and Opera */
 }
     </style>
 <link rel="stylesheet" href="CSS/feedpage.css" />
