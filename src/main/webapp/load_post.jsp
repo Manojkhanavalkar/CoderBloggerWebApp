@@ -39,7 +39,7 @@
 	
 		<div class="col-md-6 mt-2">
 			<div class="card" >
-			 <img src="img/blogImage/<%=b.getPostPic()%>" class="card-img-top" alt="...">
+			 <img src="img/blogImage/<%=b.getPostPic()%>" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
 				<div class="card-body">
 					<b><%=b.getTitle() %></b>
 				</div>
