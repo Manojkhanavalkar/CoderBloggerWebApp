@@ -78,7 +78,7 @@
         </div>
         
         <input type="submit" value="Confirm" />
-        <div class="signup_link"> Next time se yaad rkhna warna,.. <a href="#"></a></div>
+        <div class="signup_link"> Next time remember!! <a href="#"></a></div>
       </form>
     </div>
    <script>
